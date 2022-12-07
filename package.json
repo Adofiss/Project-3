@@ -6,9 +6,24 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bcrypt": "^5.1.0",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "logger": "^0.0.1",
+    "mongoose": "^6.8.0",
+    "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.4.4",
+    "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "serve-favicon": "^2.5.0",
+    "uid": "^2.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }
