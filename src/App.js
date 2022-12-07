@@ -23,8 +23,6 @@ import {
   Routes
 } from 'react-router-dom'
 
-
-
 function App() {
       const [user, setUser] = useState (getUser());
 

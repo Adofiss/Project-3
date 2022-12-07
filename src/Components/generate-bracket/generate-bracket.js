@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './generate-bracket.css';
 
 //Import Team model
-import Team from '../../Models/Team';
+// import Team from '../../Models/Team';
 
-import { Route, Navigate } from 'react-router'
+import { Navigate } from 'react-router'
 
 class TeamInput extends Component {
 
@@ -161,7 +161,7 @@ class GenerateBracketPage extends Component {
 
     if (this.state.bracket_generated === true) {
         return (
-          <Navigate push to = "view-matchs" />
+          <Navigate push to = "/view-matchs" />
         );
     }
 
