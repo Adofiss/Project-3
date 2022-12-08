@@ -11,6 +11,8 @@ import ViewMatchsContainer from './Containers/ViewMatchsContainer';
 import HandleMatchContainer from './Containers/HandleMatchContainer';
 import GenerateBracketContainer from './Containers/GenerateBracketContainer.js';
 import GameOverContainer from './Containers/GameOverContainer';
+import Content from './Containers/Content';
+
 import NavBar from './Components/NavBar/NavBar'
 import AuthPage from './Containers/AuthContainer/AuthPage'
 import { useState } from 'react'
@@ -41,6 +43,7 @@ function App() {
                <Route path = '/generate-bracket' element = {<GenerateBracketContainer />}/>
                <Route path = '/game-over' element = {<GameOverContainer />}/>
                <Route path = '/view-match' element = {<ViewMatchsPage />}/>
+               <Route path='/Content' element = {<Content />}/>
                </Routes>
         </div>
         </Router>
@@ -53,3 +56,4 @@ function App() {
   );
 }
 export default App;
+
