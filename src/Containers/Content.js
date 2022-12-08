@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "../App.css";
-import Leagues from "./Leagues";
-import Standings from "./Standings";
+import Leagues from "./Leagues/Leagues";
+import Standings from "./Standings/Standings";
 
 const Content = () => {
 
