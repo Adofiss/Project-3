@@ -4,15 +4,15 @@ import "./Standings.css"
 import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner'
 
-const options = {
-    method: 'GET',
-    url: 'https://api-football-v1.p.rapidapi.com/v3/standings',
-    params: {season: '2020', league: '39'},
-    headers: {
-      'X-RapidAPI-Key': 'f153fa0423msh9800418926a9162p1783d4jsnfd7aca44ac41',
-      'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-    }
-  };
+// const options = {
+//     method: 'GET',
+//     url: 'https://api-football-v1.p.rapidapi.com/v3/standings',
+//     params: {season: '2020', league: '39'},
+//     headers: {
+//       'X-RapidAPI-Key': 'f153fa0423msh9800418926a9162p1783d4jsnfd7aca44ac41',
+//       'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+//     }
+//   };
 
   const Standings = () => {
     const [data, setData] = useState([]);
@@ -21,14 +21,22 @@ const options = {
     const [selectedYear, setSelectedYear] =useState("2021");
 
     useEffect(() => {
-        setLoading(true)
-        axios.request(options).then(function (response) {
-            console.log(response.data.response);
-            setData(response.data.response)
-        }).catch(err => console.log(err))
-        .finally(() => setLoading(false))
+        setLoading(true);
+        axios(`https://api-football-v1.p.rapidapi.com/v3/standings`).then((res) => {
+            console.log(res.data);
+        }).catch(err=>console.log(err))
+        .finally(()=>setLoading(false))
+    }, [selectedYear, selectedLeague])
 
-    }, []);
+    // useEffect(() => {
+    //     setLoading(true)
+    //     axios.request(options).then(function (response) {
+    //         console.log(response.data.response);
+    //         setData(response.data.response)
+    //     }).catch(err => console.log(err))
+    //     .finally(() => setLoading(false))
+
+    // }, []);
 
 
 
@@ -78,21 +86,19 @@ const options = {
             ) : (
                 data.map((data, index) =>
                 <div key={data.team.id} className="standing-info-div">
-                    {/* <h1>
+                    <h1>
                         <span>
                             {`${index + 1},`}
                             <img src={data.team.logos[0].href} alt="#" style={{width:"50px"}} />
                         </span>
                         {data.team.shortDisplayName}
-                    </h1> */}
+                    </h1>
             </div>)
             )
            }
          </div>
         </div>
     )
-
-
   }
 
 export default Standings

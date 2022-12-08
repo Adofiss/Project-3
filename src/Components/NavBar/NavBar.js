@@ -13,11 +13,11 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
         
-      {/* <Link to="Teams ">Add </Link>
-      &nbsp; | &nbsp; */}
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
       <Link to="/">Home</Link>
+      &nbsp; | &nbsp;
+      <Link to="Content ">LIVE</Link>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
