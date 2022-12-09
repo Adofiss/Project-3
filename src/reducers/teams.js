@@ -1,4 +1,5 @@
 import Team from '../Models/Team';
+import "../App.css";
 
 import {ADD_TEAM} from '../Constants';
 
@@ -8,7 +9,7 @@ export const teams = (state = [
     new Team("Spain", null),
     new Team("Mexico", null),
 ], action) => {
-    switch(action.type) {
+    switch(action.type) {    
 
         case ADD_TEAM:
             var team = action.team;

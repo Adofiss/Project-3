@@ -1,5 +1,5 @@
 import Match from './Match';
-import Team from './Team';
+// import Team from './Team';
 
 class Bracket {
 

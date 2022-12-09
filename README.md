@@ -22,31 +22,27 @@ A simple Application that trackes personal sports brackets.
 
 <img src="/public/images/Generate-Bracket.png">
 
-<!-- ## Screenshots
+## Screenshots
 
 ### home page
 
-<img src="/public/images/5.png">
+<img src="/public/images/Home-Page.png">
 
-### add workout page
+### add team page
 
-<img src="/public/images/1.png">
+<img src="/public/images/Add-Team-Page.png">
 
-### add exercise page
+### Generate bracket page page
 
-<img src="/public/images/6.png">
+<img src="/public/images/Generate-Bracket-Page.png">
 
-### workout page
+### View-Matchs page
 
-<img src="/public/images/2.png">
+<img src="/public/images/View-Matchs.png">
 
-### edit page
+### Leagues page
 
-<img src="/public/images/4.png">
-
-### detail page
-
-<img src="/public/images/3.png"> -->
+<img src="/public/images/Leagues.png">
 
 ## Technology Used
 
