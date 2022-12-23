@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-// import './home.css';
+import React, {useState, useEffect, Component } from 'react';
+import './home.css';
 
-import { Router, Navigate } from 'react-router'
+import { Navigate } from 'react-router'
 
 class HomePage extends Component {
 

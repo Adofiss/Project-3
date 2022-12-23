@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import './handle-match.css';
+import './handle-match.css';
 
-import { Router, Navigate } from 'react-router'
+import { Route, Navigate } from 'react-router'
 
 //Import Match model
 import Match from '../../Models/Match';
