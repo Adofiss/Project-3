@@ -1,22 +1,17 @@
-import React from 'react';
 import './App.css';
-
-//Pages
-import ViewMatchsPage from './Components/view-matchs/view-matchs';
-
-//Containers
-import HomeContainer from './Containers/HomeContainer';
-import AddTeamContainer from './Containers/AddTeamContainer';
-import ViewMatchsContainer from './Containers/ViewMatchsContainer';
-import HandleMatchContainer from './Containers/HandleMatchContainer';
-import GenerateBracketContainer from './Containers/GenerateBracketContainer.js';
-import GameOverContainer from './Containers/GameOverContainer';
-import Content from './Containers/Content';
-
-import NavBar from './Components/NavBar/NavBar'
-import AuthPage from './Containers/AuthContainer/AuthPage'
-import { useState } from 'react'
-import { getUser } from './utilities/users-service';
+import AuthPage from '../AuthContainer/AuthPage'
+import NavBar from '../../components/NavBar/NavBar'
+// import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react'
+import { getUser } from '../../utilities/users-service';
+import HomeContainer from './HomeContainer.jsx';
+import AddTeamContainer from './AddTeamContainer.jsx';
+import ViewMatchsContainer from './ViewMatchsContainer.jsx';
+import HandleMatchContainer from './HandleMatchContainer.jsx';
+import GenerateBracketContainer from './GenerateBracketContainer.jsx';
+import GameOverContainer from './GameOverContainer';
+// import ViewMatchsPage from '../../Components/view-matchs/view-matchs';
+// import { useState } from 'react';
 
 //Import Routing
 import {
@@ -26,14 +21,14 @@ import {
 } from 'react-router-dom'
 
 function App() {
-      const [user, setUser] = useState (getUser());
+  const [user, setUser] = useState (getUser());
 
   return (
     <main className="App">
       { user ?
         <>
-          <Router>
           <NavBar user={user} setUser={setUser} />
+          <Router>
           <div>
             <Routes>
                <Route path="/" element={<HomeContainer />}/>
@@ -43,7 +38,6 @@ function App() {
                <Route path = '/generate-bracket' element = {<GenerateBracketContainer />}/>
                <Route path = '/game-over' element = {<GameOverContainer />}/>
                <Route path = '/view-match' element = {<ViewMatchsPage />}/>
-               <Route path='/Content' element = {<Content />}/>
                </Routes>
         </div>
         </Router>
@@ -55,4 +49,5 @@ function App() {
     </main>
   );
 }
+
 export default App;
