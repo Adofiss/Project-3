@@ -1,5 +1,4 @@
 import Match from './Match';
-// import Team from './Team';
 
 class Bracket {
 
@@ -69,7 +68,7 @@ class Bracket {
 
     console.log("CURRENT ROUND" + this.current_round);
 
-    if (this.current_round != (this.round_cnt)) {
+    if (this.current_round !== (this.round_cnt)) {
       this.generateNewRound();
       this.current_round += 1;
     }else {
@@ -145,7 +144,7 @@ class Bracket {
 
       var round_completed = this.getRoundCompleted(i + 1);
 
-      if (round_completed == false) {
+      if (round_completed === false) {
         bracket_ended = false;
       }else {
         continue;

@@ -4,7 +4,7 @@ import './add-team.css';
 import Team from '../../Models/Team'
 
 //Import routing
-import { Route, Navigate } from 'react-router'
+import { Navigate } from 'react-router'
 
 
 class AddTeamPage extends Component {

@@ -15,7 +15,7 @@ import Spinner from 'react-bootstrap/Spinner'
 //   };
 
   const Standings = () => {
-    const [data, setData] = useState([]);
+    const [data] = useState([]);
     const [loading, setLoading] = useState(false);
     const [selectedLeague, setSelectedLeague] =useState("eng.1");
     const [selectedYear, setSelectedYear] =useState("2021");

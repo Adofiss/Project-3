@@ -43,7 +43,7 @@ class Match {
 
   setWinnerByScore() {
 
-    if (this.score_one == this.score_two) {
+    if (this.score_one === this.score_two) {
       //Can't have a tie
     }else if (this.score_one > this.score_two) {
       this.setWinner(Match.TEAM_ONE);

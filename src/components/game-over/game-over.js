@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './game-over.css';
 
-import { Route, Navigate } from 'react-router'
-
-import Team from '../../Models/Team';
+import { Navigate } from 'react-router'
 
 class GameOverPage extends Component {
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import './home.css';
 
 import { Navigate } from 'react-router'

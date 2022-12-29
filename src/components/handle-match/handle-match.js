@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './handle-match.css';
 
-import { Route, Navigate } from 'react-router'
+import {Navigate } from 'react-router'
 
-//Import Match model
-import Match from '../../Models/Match';
 
 class HandleMatchPage extends Component {
 
@@ -51,9 +49,9 @@ class HandleMatchPage extends Component {
 
     var updated_score = this.state.selectedMatch[score_to_update];
 
-    if (type == "sub" && updated_score > 0) {
+    if (type === "sub" && updated_score > 0) {
       updated_score = updated_score - 1;
-    }else if (type == "add") {
+    }else if (type === "add") {
       updated_score = updated_score + 1;
     }
 
@@ -66,7 +64,7 @@ class HandleMatchPage extends Component {
 
   render() {
 
-    if (this.props.selected_match == undefined || this.state.scoreUpdated === true) {
+    if (this.props.selected_match === undefined || this.state.scoreUpdated === true) {
       return (
         <Navigate to = "/view-matchs" />
       )

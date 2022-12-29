@@ -1,4 +1,3 @@
-import Team from '../Models/Team';
 import Match from '../Models/Match';
 import Bracket from '../Models/Bracket';
 

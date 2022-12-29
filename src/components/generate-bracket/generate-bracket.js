@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './generate-bracket.css';
 
-//Import Team model
-// import Team from '../../Models/Team';
-
 import { Navigate } from 'react-router'
 
 class TeamInput extends Component {

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './view-matchs.css';
 
-import { Route, Navigate } from 'react-router'
+import { Navigate } from 'react-router'
 
-import Match from '../../Models/Match';
 
 class ViewMatchsPage extends Component {
 
@@ -29,11 +28,11 @@ class ViewMatchsPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    let {bracket,teams,  matchs, round_generated} = nextProps;
+    let {bracket,teams, round_generated} = nextProps;
 
     if (bracket !== null) {
-      if (bracket.currentRoundCompleted() == true) {
-        if (bracket.current_round == bracket.rounds_cnt) {
+      if (bracket.currentRoundCompleted() === true) {
+        if (bracket.current_round === bracket.rounds_cnt) {
             var match = bracket.rounds_list[bracket.rounds_cnt - 1][0];
             var winner_id = match.getWinner();
 
@@ -53,7 +52,7 @@ class ViewMatchsPage extends Component {
     }
 
 
-    if (round_generated == true) {
+    if (round_generated === true) {
       nextProps.setRoundGenerated(false);
       nextProps.getRoundMatchs(bracket);
     }
